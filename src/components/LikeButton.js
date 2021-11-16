@@ -1,15 +1,38 @@
-import React from 'react'
+import React from 'react';
 
-LikeButton = () => {
+class LikeButton extends React.Component {
+  state = {
+    counter: 0,
+    backgroundColor: 'pink',
+  };
+  clickHandler = () => {
+    const colorList = [
+      'purple',
+      'blue',
+      'green',
+      'yellow',
+      'orange',
+      'red',
+      'pink',
+    ];
+    const newColor = colorList[Math.floor(Math.random() * colorList.length)];
+
+    this.setState((state) => ({
+      counter: state.counter + 1,
+      backgroundColor: newColor,
+    }));
+  };
+
+  render() {
     return (
-        this.setState(state => ({
-            liked: !state.liked
-        }))
-    )
+      <button
+        onClick={this.clickHandler}
+        style={{ backgroundColor: this.state.backgroundColor }}
+      >
+        {this.state.counter} Likes
+      </button>
+    );
+  }
 }
 
-render() {
-    return (
-        <button onClick={this.LikeButton}>Like</button>
-    )
-}
+export default LikeButton;

@@ -15,7 +15,6 @@ const BoxColor = (props) => {
 
 function getHexa(val) {
   const hexa = parseInt(val).toString(16);
-  console.log(hexa);
   return hexa.length === 1 ? '0' + hexa : hexa;
 }
 
