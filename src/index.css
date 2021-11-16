@@ -19,6 +19,10 @@ img {
   margin: 5px;
 }
 
+h1 {
+  text-align: center;
+}
+
 .strong {
   font-weight: bold;
 }
@@ -54,4 +58,38 @@ img {
   height: 80px;
   border: solid;
   margin: 10px;
+}
+
+.CreditCardSection {
+  display: flex;
+  flex-direction: row;
+  margin: 15px;
+}
+
+.CreditCard {
+  margin: 20px;
+  height: 220px;
+  width: 500px;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.CreditCard img {
+  width: 60px;
+}
+
+.CreditCardNumber {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.bank {
+  margin-left: 30px;
 }
